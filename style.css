@@ -1,0 +1,69 @@
+/* 誠士録 サポート・プライバシーポリシー共通様式。
+   アプリ本体(Seishiroku/Support/Theme.swift)の色に合わせてある。 */
+:root {
+  --washi: #F4EFE3;
+  --washi-deep: #ECE5D5;
+  --sumi: #272320;
+  --sumi-soft: #5A544C;
+  --shu: #B23A2F;
+  --ai: #2B4B6F;
+  --line: rgba(39, 35, 30, 0.14);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; padding: 0 20px 64px;
+  background: var(--washi); color: var(--sumi);
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85; font-size: 16px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header { border-bottom: 3px solid var(--shu); padding: 40px 0 16px; margin-bottom: 28px; }
+header .kicker { font-size: 13px; letter-spacing: 0.2em; color: var(--shu); margin: 0 0 6px; }
+header h1 { margin: 0; font-size: 27px; line-height: 1.35; }
+header p { margin: 8px 0 0; font-size: 14px; color: var(--sumi-soft); }
+
+h2 {
+  font-size: 19px; margin: 40px 0 12px; padding-left: 12px;
+  border-left: 4px solid var(--shu);
+}
+h3 { font-size: 16px; margin: 26px 0 8px; }
+p, li { color: var(--sumi); }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+a { color: var(--ai); }
+small, .soft { color: var(--sumi-soft); font-size: 14px; }
+
+.card {
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  padding: 18px 20px; margin: 20px 0;
+}
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.contact { background: var(--washi-deep); border-color: transparent; }
+.contact .addr {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 17px; word-break: break-all;
+}
+
+.qa { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
+.qa:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.qa .q { font-weight: 700; margin: 0 0 4px; }
+.qa .a { margin: 0; color: var(--sumi-soft); font-size: 15px; }
+
+nav.crumbs { margin: 32px 0 0; font-size: 14px; }
+footer {
+  margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line);
+  font-size: 13px; color: var(--sumi-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --washi: #1A1815; --washi-deep: #232019; --sumi: #EDE7DA;
+    --sumi-soft: #A49C90; --line: rgba(237, 231, 218, 0.16);
+  }
+  .card { background: #232019; }
+  a { color: #7FAFD4; }
+}
